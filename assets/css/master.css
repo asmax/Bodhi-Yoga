@@ -1,0 +1,223 @@
+/*
+project variables file.
+*/
+/* 
+    Created on : Oct 12, 2015, 9:28:15 AM
+    Author     : Aamer
+*/
+/* general elemebts */
+body {
+  color: #252525;
+  line-height: 28px; }
+
+a {
+  text-decoration: none;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in; }
+  a:hover, a:focus {
+    text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "caviar_dreamsbold", sans-serif; }
+
+h1 {
+  font-size: 36px;
+  line-height: 40px; }
+
+h3 {
+  font-size: 22px;
+  line-height: 26px; }
+
+p {
+  display: inline-block;
+  overflow: hidden; }
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="password"],
+.btn,
+.button,
+button,
+input[type="submit"] {
+  @inclue border-radius(6px); }
+
+/* header section */
+.header-top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #2e6839; }
+  .header-top .header-top--menu .navbar-nav li {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .header-top .header-top--menu .navbar-nav li a {
+      background-color: transparent;
+      font-size: 20px;
+      padding: 0;
+      color: #ffffff; }
+      .header-top .header-top--menu .navbar-nav li a:hover {
+        color: #f7ee8a; }
+  .header-top .header-top--social {
+    margin-bottom: 0; }
+    .header-top .header-top--social li {
+      padding: 0 3px; }
+      .header-top .header-top--social li a {
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 20px; }
+        .header-top .header-top--social li a:hover {
+          color: #f7ee8a; }
+
+.header-image {
+  margin-bottom: 50px; }
+
+.page-header-image {
+  margin-bottom: 20px; }
+
+.centered-logo-header {
+  border-bottom: 1px solid #111111; }
+  .centered-logo-header .centered-logo-header--logo {
+    width: 155px;
+    display: inline-block;
+    background-image: url("../images/flower-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 110px;
+    background-size: 100%;
+    margin: 0 0 30px; }
+  .centered-logo-header .page-title {
+    margin: 0 0 0;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    color: #2e6839; }
+
+.page-template-template-gallery .header-top {
+  margin-bottom: 20px; }
+
+/* page content section */
+.content-wrap .page-content {
+  padding: 40px 0; }
+  .content-wrap .page-content p {
+    margin: 20px 0; }
+
+/* gallery page template */
+.gallery-wrap {
+  margin-left: -20px;
+  margin-right: -20px; }
+  .gallery-wrap .gallery-item--single {
+    margin: 40px 5px; }
+
+/* blog page template */
+.blog-wrap {
+  margin-bottom: 100px; }
+  .blog-wrap .blog-item--single {
+    border-bottom: 1px solid #111111;
+    padding: 80px 30px 70px; }
+    .blog-wrap .blog-item--single > p {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 24px;
+      overflow: hidden;
+      clear: both; }
+    .blog-wrap .blog-item--single .blog-post-title {
+      margin: 0 0 30px;
+      text-transform: uppercase;
+      font-size: 30px; }
+      .blog-wrap .blog-item--single .blog-post-title a {
+        color: #010101; }
+        .blog-wrap .blog-item--single .blog-post-title a:hover {
+          color: #343434; }
+    .blog-wrap .blog-item--single .blog-post-date {
+      margin-bottom: 50px;
+      font-size: 18px; }
+
+.page-template-template-blog .header-top {
+  margin-bottom: 20px; }
+
+.blog-thumbnail-wrap {
+  margin-bottom: 50px; }
+  .blog-thumbnail-wrap img {
+    border: 1px solid #000000;
+    margin: 0 auto; }
+
+/* footer section */
+.subscribe-form-wrap {
+  margin-bottom: 40px; }
+  .subscribe-form-wrap .footer-widget {
+    margin-bttom: 0; }
+    .subscribe-form-wrap .footer-widget .widget-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 0 0 10px; }
+  .subscribe-form-wrap input[type="text"], .subscribe-form-wrap input[type="email"], .subscribe-form-wrap input[type="phone"], .subscribe-form-wrap input[type="password"] {
+    padding: 30px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    height: 60px; }
+    .subscribe-form-wrap input[type="text"]:focus, .subscribe-form-wrap input[type="email"]:focus, .subscribe-form-wrap input[type="phone"]:focus, .subscribe-form-wrap input[type="password"]:focus {
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  .subscribe-form-wrap ::-webkit-input-placeholder {
+    color: #ffffff; }
+  .subscribe-form-wrap :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff; }
+  .subscribe-form-wrap ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff; }
+  .subscribe-form-wrap :-ms-input-placeholder {
+    color: #ffffff; }
+  .subscribe-form-wrap .btn,
+  .subscribe-form-wrap .button,
+  .subscribe-form-wrap button,
+  .subscribe-form-wrap input[type="submit"] {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 20px 30px;
+    height: 62px;
+    width: 100%; }
+
+.footer {
+  background-color: #2e6839;
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .footer .footer--credits_social {
+    margin-bottom: 0;
+    margin-left: 10px; }
+    .footer .footer--credits_social li {
+      padding: 0 3px; }
+      .footer .footer--credits_social li a {
+        color: #ffffff;
+        font-size: 20px; }
+  .footer .footer--credits p,
+  .footer .footer--credits_social {
+    display: inline-block;
+    margin-bottom: 0; }
+  .footer .footer--credits {
+    font-size: 14px; }
+  .footer .footer--menu .footer--menu_list {
+    margin-bottom: 0; }
+    .footer .footer--menu .footer--menu_list li {
+      border-right: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      padding: 0 10px;
+      margin: -2px;
+      line-height: 1; }
+      .footer .footer--menu .footer--menu_list li:first-child {
+        border-left: 0;
+        padding-left: 7px; }
+      .footer .footer--menu .footer--menu_list li:last-child {
+        border-right: 0;
+        padding-right: 0; }
+      .footer .footer--menu .footer--menu_list li a {
+        color: #ffffff;
+        font-size: 18px; }
