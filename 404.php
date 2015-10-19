@@ -5,51 +5,27 @@
  */
 
 get_header(); ?>
+<div class="container">
+	
+	<div class="error-404-wrap row">
+    
+	    <!-- page centered title -->
+	    <div class="centered-logo-header text-center">
+	        <span class="centered-logo-header--logo"></span>
+	        <h1 class="page-title"><?php esc_html_e( 'Page Not Found :-(', 'bodhi-yoga' ); ?></h1>
+	    </div>
+    
+		<div class="error-page-content col-sm-8 col-sm-offset-2 text-center mt-50 mb-50">
+			<p class="well"><?php esc_html_e( 'This page does not exist, this is because of Broken link or page is moved.', 'bodhi-yoga' ); ?></p>
+			<div class="col-md-10 col-md-offset-1">
+				<h4>Try Searching for something else.</h4>
+				<?php get_search_form(); ?>						
+			</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		</div><!-- error-page-content -->
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bodhi-yoga' ); ?></h1>
-				</header><!-- .page-header -->
+	</div>
+	<!-- error-404-wrap -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bodhi-yoga' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( bodhi_yoga_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bodhi-yoga' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bodhi-yoga' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+</div>
 <?php get_footer(); ?>

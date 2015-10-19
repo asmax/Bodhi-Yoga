@@ -22,6 +22,7 @@
                  <?php
                     wp_nav_menu( array(
                         'menu'              => 'primary',
+                        'theme_location'	=> 'primary',
                         'depth'             => 2,
                         'container'         => 'div',
                         'container_class'   => 'collapse navbar-collapse',

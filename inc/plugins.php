@@ -22,18 +22,18 @@ function bodhi_yoga_register_required_plugins() {
 			'slug'               => 'advcustfpro',
 			'source'             => get_stylesheet_directory_uri() . '/inc/plugins/advcustfpro.zip',
 			'required'           => true,
-			'version'            => '',
+			//'version'            => '',
 			'force_activation'   => false,
 			'force_deactivation' => false,
-			'external_url'       => '',
-			'is_callable'        => '',
-		)
+			//'external_url'       => '',
+			//'is_callable'        => '',
+		),
 		// Include Plugin from the WordPress Plugin Repository.
-		// array(
-		// 	'name'      => 'BuddyPress',
-		// 	'slug'      => 'buddypress',
-		// 	'required'  => false,
-		// ),
+		 array(
+		 	'name'      => 'WooCommerce',
+		 	'slug'      => 'woocommerce',
+		 	'required'  => false,
+		 ),
 
 	);
 

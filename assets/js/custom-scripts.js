@@ -10,4 +10,11 @@ jQuery(document).ready(function($) {
       $('.tabs-header > .active').prev('.tab-inner').find('a').trigger('click');
     });
     
+  $('.testimonial-slides').slick({
+      dots: true,
+      arrows: false
+  });
+  
+  $(".number-spinner").WanSpinner(options);
+
 });

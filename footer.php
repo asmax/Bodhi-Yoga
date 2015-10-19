@@ -19,12 +19,17 @@
                 <?php endif; ?>
                 
                 <div class="row">
-                    <div class="footer--menu col-md-8">
-                        <ul class="footer--menu_list list-inline pull-left">
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
+	                 <?php
+	                    wp_nav_menu( array(
+	                        'menu'              => 'footer',
+	                        'depth'             => 1,
+	                        'container'         => 'div',
+	                        'container_class'   => 'footer--menu col-md-8',
+	                        'container_id'      => 'footer--menu',
+	                        'menu_class'        => 'footer--menu_list list-inline pull-left',
+	                        'fallback_cb'       => false,
+	                    ));
+	                ?>
                     <div class="footer--credits col-md-4">
                         <span class="pull-right"> 
                         <p>

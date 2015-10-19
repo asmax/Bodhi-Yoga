@@ -18,3 +18,14 @@ function bodhi_yoga_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'bodhi_yoga_body_classes' );
+
+
+//Page Slug Body Class
+function bodhi_yoga_add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'bodhi_yoga_add_slug_body_class' );

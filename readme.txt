@@ -15,6 +15,10 @@ Custom WordPress theme for Bodhi Yoga website. Based on Fliegentech framework.
 
 = 1.0.2 - October 15 2015 =
 * template files added, metaboxes and theme options panel.
+
+= 1.0.3 - October 19 2015 =
+* page templates, post types, metaboxes and theme options panel.
+
 == Credits ==
 
 * Based on Fliegentech Framework http://fliegentech.com/, (C) 2012-2015.

@@ -15,6 +15,14 @@ $teacher_meta = $bodhi_yoga->createMetaBox( array(
     'name' => 'Become Teacher Metabox',
     'post_type' => 'training'
 ));
+$testimonial_meta = $bodhi_yoga->createMetaBox( array(
+    'name' => 'Testimonial Metabox',
+    'post_type' => 'testimonial'
+));
+$teachers_meta = $bodhi_yoga->createMetaBox( array(
+    'name' => 'Teacher Metabox',
+    'post_type' => 'teacher'
+));
 //========================================= //
 //========== Page Metabox Start =========== //
 //========================================= //
@@ -27,9 +35,9 @@ $page_meta->createOption( array(
     'default' => false,
 ));
 
-//============================================ //
-//========== Teacher Metabox Start =========== //
-//============================================ //
+//============================================= //
+//========== Training Metabox Start =========== //
+//============================================= //
 
 // teacher trainig heading
 $teacher_meta->createOption( array(
@@ -64,6 +72,28 @@ $teacher_meta->createOption( array(
     'type' => 'date',
     'desc' => 'Choose a End date',
     'default' => '',
+));
+
+//================================================ //
+//========== Testimonial Metabox Start =========== //
+//================================================ //
+
+// testimonial author
+$testimonial_meta->createOption( array(
+    'name' => 'Testimonial Author Meta',
+    'id' => 'bodhi_testimonial_author_meta',
+    'type' => 'text',
+));
+
+//================================================ //
+//========== Teacher Metabox Start =========== //
+//================================================ //
+
+// teacher trainig heading
+$teachers_meta->createOption( array(
+    'name' => 'Teacher Meta',
+    'id' => 'bodhi_teacher_meta',
+    'type' => 'text',
 ));
 
 }
