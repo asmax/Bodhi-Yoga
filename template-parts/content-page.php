@@ -17,7 +17,7 @@
         <?php the_title( '<h1 class="page-title">', '</h2>' ); ?>
     </div>
 
-	<div class="entry-content">
+	<div class="single-page-content entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

@@ -54,8 +54,8 @@
 		?>
 <div class="product-show-more course-info" id="accordion" role="tablist" aria-multiselectable="true">
 	<div class="course-info--inner">
-		<div class="course--heading" role="tab" id="heading-1" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-		<h4 class="size-22 font-bradley course-title">Details:<span class="pull-right">Show More <i class="fa fa-plus-square-o"></i></span></h4>
+		<div class="course--heading collapsed" role="tab" id="heading-1" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+		<h4 class="size-22 font-bradley course-title">Details:</h4>
 		</div>
 	<div id="collapse-1" class="product-show-more-content course-info--content collapse" role="tabpanel" aria-labelledby="heading-1" aria-expanded="true">
 	<div><?php the_content(); ?></p>

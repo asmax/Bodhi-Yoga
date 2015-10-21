@@ -3,7 +3,11 @@
  * The template for displaying the footer.
  * @package bodhi_yoga
  */
-
+$bodhi_value = TitanFramework::getInstance( 'bodhi-yoga' );
+$bodhi_social_facebook = $bodhi_value->getOption( 'bodhi_social_facebook' );
+$bodhi_social_instagram = $bodhi_value->getOption( 'bodhi_social_instagram' );
+$bodhi_social_tumblr = $bodhi_value->getOption( 'bodhi_social_tumblr' );
+$bodhi_social_twitter = $bodhi_value->getOption( 'bodhi_social_twitter' );
 ?>
 
 	</div><!-- #content -->
@@ -44,10 +48,20 @@
                         ?>
                         </p>
                         <ul class="footer--credits_social list-inline list-unstyled">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <?php
+                            if ( !empty($bodhi_social_facebook) ):
+                                echo '<li><a href="'.$bodhi_social_facebook.'"><i class="fa fa-facebook"></i></a></li>';
+                            endif;
+                            if ( !empty($bodhi_social_instagram) ):
+                                echo '<li><a href="'.$bodhi_social_instagram.'"><i class="fa fa-instagram"></i></a></li>';
+                            endif;
+                            if ( !empty($bodhi_social_tumblr) ):
+                                echo '<li><a href="'.$bodhi_social_tumblr.'"><i class="fa fa-tumblr"></i></a></li>';
+                            endif;
+                            if ( !empty($bodhi_social_twitter) ):
+                                echo '<li><a href="'.$bodhi_social_twitter.'"><i class="fa fa-twitter"></i></a></li>';
+                            endif;
+                            ?>
                         </ul>
                         </span>
                     </div>

@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     // initiate the wow class
     new WOW().init();
     
-    $('.btnNext').click(function(){
+  $('.btnNext').click(function(){
       $('.tabs-header > .active').next('.tab-inner').find('a').trigger('click');
     });
     $('.btnPrevious').click(function(){
@@ -12,9 +12,19 @@ jQuery(document).ready(function($) {
     
   $('.testimonial-slides').slick({
       dots: true,
-      arrows: false
+      arrows: false,
+      adaptiveHeight: true
+  });
+
+  $('.trainings-slider').slick({
+      arrows: true,
+      slidesToShow: 4,
+      slidesToScroll: 1
   });
   
   $(".number-spinner").WanSpinner(options);
+
+  // fancy box for gallery images
+  $('.fancybox').fancybox();
 
 });

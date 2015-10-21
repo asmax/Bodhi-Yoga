@@ -30,8 +30,12 @@ require_once( FRAMEWORK_INC . 'template-tags.php' );
 require_once( FRAMEWORK_INC . 'woocommerce-functions.php' );
 require_once( FRAMEWORK_INC . 'wp_bootstrap_navwalker.php' );
 
+// widgets
+require_once( FRAMEWORK_INC . 'widgets/widget-page-thumbnail.php' );
+
 require_once( FRAMEWORK_DIR . 'options/titan-framework-embedder.php' );
 require_once( FRAMEWORK_DIR . 'options/options.php' );
+require_once( FRAMEWORK_DIR . 'options/metaboxes.php' );
 require_once( FRAMEWORK_DIR . 'options/metaboxes.php' );
 
 
@@ -119,13 +123,18 @@ function bodhi_yoga_scripts() {
 	wp_enqueue_style( 'bodhi-yoga-animate', get_template_directory_uri() . '/assets/css/animate.css' );
 	wp_enqueue_style( 'bodhi-yoga-slick', get_template_directory_uri() . '/assets/css/slick.css' );
 	wp_enqueue_style( 'bodhi-yoga-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css' );
+	wp_enqueue_style( 'bodhi-yoga-fancybox', get_template_directory_uri() . '/assets/css/jquery.fancybox.css' );
 	wp_enqueue_style( 'bodhi-yoga-master-style', get_template_directory_uri() . '/assets/css/master.css' );
+
+	wp_register_script( 'jquery-10', get_template_directory_uri() . '/assets/js/jquery-10.min.js', array(), null, false );
 
 	wp_enqueue_script( 'bodhi-yoga-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bodhi-yoga-wow', get_template_directory_uri() . '/assets/js/wow.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bodhi-yoga-slick', get_template_directory_uri() . '/assets/js/slick.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bodhi-yoga-parallax', get_template_directory_uri() . '/assets/js/parallax.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bodhi-yoga-soinner', get_template_directory_uri() . '/assets/js/wan-spinner.js', array('jquery'), null, true );
+	wp_enqueue_script( 'bodhi-yoga-fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.js', array('jquery-10'), null, true );
+	// wp_enqueue_script( 'bodhi-yoga-fancybox-pack', get_template_directory_uri() . '/assets/js/jquery.fancybox.pack.js', array('jquery'), null, true );
 	wp_enqueue_script( 'bodhi-yoga-cusom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array('jquery'), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

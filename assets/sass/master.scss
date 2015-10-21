@@ -43,6 +43,10 @@ h3 {
 .font-caviar {
     font-family: $font-family__caviar-bold !important;   
 }
+.font-caviar-regular {
+    font-family: $font-family__caviar-regular !important;   
+}
+
 .font-bradley {
     font-family: $font-family__bradley-bold !important;
 }
@@ -64,8 +68,20 @@ h3 {
 .size-22 {
     font-size: 22px !important;
 }
+.size-24 {
+    font-size: 24px !important;
+}
 .size-27 {
     font-size: 27px !important;
+}
+.size-36 {
+    font-size: 36px !important;
+}
+.size-40 {
+    font-size: 40px !important;
+}
+.size-48 {
+    font-size: 48px !important;
 }
 .color-green {
     color: $color__green;
@@ -87,6 +103,19 @@ h3 {
     display: block;
     @include border-radius(50%);
 }
+.circle-45 {
+    background-color: transparent;
+    border: 2px solid $color__green;
+    color: $color__green;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    @include border-radius(50%);
+}
 .upper {
 	text-transform: uppercase;
 }
@@ -100,8 +129,20 @@ h3 {
 .mb-0 {
 	margin-bottom: 0 !important;
 }
+.mt-20 {
+    margin-top: 20px;
+}
 .mb-50 {
     margin-bottom: 50px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mt-30 {
+    margin-top: 30px;
 }
 .mt-60 {
     margin-top: 60px;
@@ -116,6 +157,9 @@ h3 {
     .circle-20 {
         background-color: $color__green;
     }
+}
+.img-center {
+    margin: 0 auto;
 }
 .parallax-container {
     min-height: 400px;
@@ -140,6 +184,7 @@ h3 {
 
 .btn-primary {
     background-color: $color__green;
+    padding: 25px 30px;
     line-height: 1;
     border: none;
     color: $color__white;
@@ -161,10 +206,10 @@ h3 {
         margin-left: 10px;
     }
 }
-p {
+/*p {
     display: inline-block;
     overflow: hidden;
-}
+}*/
 input[type="text"],
 input[type="email"],
 input[type="phone"],
@@ -204,7 +249,34 @@ input[type="submit"] {
                 }
                 
                 .dropdown-menu {
+                    background-color: $color__green;
+                    border: none;
+                    width: 250px;
+                    top: 65px;
+                    padding: 0 20px;
+                    text-align: center;
+
+                    @include border-radius(0);
+                    @include box-shadow(none);
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -15px;
+                        left: 50%;
+                        width: 30px;
+                        height: 15px;
+                        margin-left: -15px;
+                        border-bottom: 15px solid $color__green;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                    }
                     & li {
+                        padding: 20px 0;
+                        border-bottom: 1px solid $color__white;
+                        &:last-child {
+                            border-bottom: none;
+                        }
                         & a {}
                     }
                 }
@@ -239,12 +311,92 @@ input[type="submit"] {
         }
     }
 }
-.header-image {
-    margin-bottom: 50px;
+.header--image {
+    position: relative;
+
+    & img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .header--image_content {
+        position: absolute;
+        width: 100%;
+        bottom: 25px;
+
+        .circle-icon {
+            display: block;
+            clear: both;
+        }
+        .dot {
+            margin: 0 15px;
+            font-size: 50px;
+        }
+    }
 }
+.trainings-slider {
+    .slick-prev, .slick-next {
+      width: 20px;
+      height: 50px;
+      margin-top: -60px;
+    }
+    .slick-prev:before, .slick-next:before {
+        color: $color__green !important;
+        font-family: FontAwesome;
+        font-size: 50px;
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+    .slick-slide {
+        outline: none;
+    }
+}
+.home-widgets-wrap {
+    .centered-logo-header {
+        border-bottom: none;
+    }
+    .widget .inner {
+        /*border: 1px solid #d6d9c4;*/
+    }
+}
+.author-welcome {
+    background-color: #f8fbe4;
+    padding: 60px 0;
+
+    .author-avatar {
+      position: relative;
+      bottom: -150px;
+    }
+    .author-message {
+        .content {
+            & p {
+                font-size: 19px;
+                color: $color__green;
+                margin-bottom: 20px;
+                letter-spacing: normal;
+                line-height: 1.6em;
+            }
+        }
+    }
+    .founder {
+        font-weight: bold;
+    }
+}
+
 .page-header-image {
     margin-bottom: 20px;
 }
+.single-page-content {
+    padding: 60px 0 100px;
+}
+.single-page-content-wrap {
+    margin-top: 20px;
+}
+
 .centered-logo-header {
     border-bottom: 1px solid $color__dark-black;
     .centered-logo-header--logo {
@@ -264,6 +416,18 @@ input[type="submit"] {
         color: $color__green;
     }
 }
+.bodhi--logo {
+    width: 155px;
+    display: inline-block;
+    background-image: url("../images/flower-icon-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 110px;
+    background-size: 100%;
+    margin: 0 0 30px;
+    position: relative;
+    top: -20px;
+}
 .centered-logo-header-large {
     .centered-logo-header-large--logo {
         width: 155px;
@@ -273,7 +437,6 @@ input[type="submit"] {
         background-repeat: no-repeat;
         min-height: 110px;
         background-size: 100%;
-        margin: 0 0 30px;
     }
     .page-title {
         margin: 0 0 0;
@@ -287,8 +450,22 @@ input[type="submit"] {
         margin-bottom: 20px;
     }
 }
-
-
+.page-template-template-training {
+    .register--button {
+        margin-top: 100px;
+        /*margin-bottom: 100px;*/
+    }
+}
+.page-template-template-teacher {
+    .centered-logo-header {
+        margin-top: 20px;
+    } 
+    .testimonial--thumbnail {
+        & img {
+            width: 100%;
+        }
+    }
+}
 /* page content section */
 .content-wrap {
     
@@ -361,12 +538,12 @@ input[type="submit"] {
     }
 }
 /* page template yoga teacher */
-.page-template-template-teacher {
+.page-template-template-training {
      .content-wrap {
         padding: 50px 0px;
     }   
 }
-.page-template-template-teacher .page-content-wrap {
+.page-template-template-training .page-content-wrap {
     margin-bottom: 20px;
     
     &h1, h2, h3, h4, h5, h6 {
@@ -384,7 +561,7 @@ input[type="submit"] {
 .training-location {
     line-height: 1;
     padding: 0;
-    margin: 0;
+    margin: 0 0 5px;
     display: block;
     font-size: 22px;
     letter-spacing: 1.5px;
@@ -408,7 +585,7 @@ input[type="submit"] {
         }
     }
     .course-info--content {
-        padding: 40px 0;
+        padding: 0 0 40px 0;
         & p {
             font-size: 17px;
             display: block !important;
@@ -419,6 +596,7 @@ input[type="submit"] {
 
 /* testimonial section */
 .testimonial-slides {
+    overflow: hidden;
     margin-bottom: 0;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -746,6 +924,79 @@ p.return-to-shop {
 	}	
 }
 
+
+/* widgets */
+.page-thumbnail-title {
+    font-size: 24px;
+    font-family: $font-family__myriad-regular;
+    margin-top: 45px;
+    margin-bottom: 60px;
+    & a {
+        color: $color__green;
+        &:hover {
+            color: darken($color__green, 10%);
+        }
+    }
+}
+.circle-hover {
+    font-family: $font-family__bradley-bold;
+    color: $color__green;
+    font-size: 39px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 250px;
+    @include border-radius(50%);
+    @include transition( background-color 0.5s ease-in-out);
+
+    &:hover:before {
+        content: "See More";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(248,251,228,0.7);
+        text-align: center;
+        @include border-radius(50%);
+    }
+}
+
+label {
+    text-transform: uppercase;
+}
+.page-contact-us {
+    .centered-logo-header {
+        margin-top: 20px;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea
+    {
+        width: 100%;
+        padding: 15px 20px !important;
+        border: 1px solid $color__gray-light;
+        @include border-radius(0);
+    }
+}
+
+.course--heading {
+    position: relative;
+}
+.course--heading .course-title:after {
+    content: 'Show Less -';
+    position: absolute;
+    right: 0;
+    top: 27px;
+    color: $color__orange;
+}
+.course--heading.collapsed .course-title:after {
+    content: 'Show More +';
+}
+
 /* footer section */
 .subscribe-form-wrap {
     margin-bottom: 40px;
@@ -861,6 +1112,61 @@ p.return-to-shop {
                         color: $color__yellow-light;
                     }
                 }
+            }
+        }
+    }
+}
+
+.home-widgets {
+    .widget {
+        & img, & object, & embed, & oembed {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+}
+.single-product .quantity {
+  display: none !important;
+}
+@media (max-width: 768px) {
+
+    .header-top--social_list {
+        padding-top: 10px;
+    }
+    .header-top .header-top--menu .navbar-nav li {
+      border-bottom: 1px solid #fff;
+      padding: 6px 0;
+    }
+    .navbar-collapse, .navbar-nav {
+        padding: 0;
+    }
+    .navbar-nav {
+        margin: 0;
+        padding-bottom: 25px;
+    }
+    .header-top {
+    }
+
+    .author-welcome .author-avatar {
+        bottom: 0;
+        text-align: center;
+
+        & img {
+            margin: 0 auto;
+        }
+    }
+    .message-title-wrap {
+        margin: 20px 0;
+        .message-title h1 {
+            text-align: center;
+        }
+        .message-title-logo {
+            text-align: center;
+            margin-top: 20px;
+            display: block;
+            .bodhi--logo {
+                margin-bottom: 0;
             }
         }
     }

@@ -11,9 +11,11 @@ function bodhi_yoga_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
-        } elseif ( is_page_template( 'template-gallery.php' ) ) {
-            $clases[] = 'gallery-page-template';
-        }
+	} elseif ( is_page_template( 'template-gallery.php' ) ) {
+        $classes[] = 'gallery-page-template';
+    } elseif ( is_page_template( 'template-half-featured-image.php' ) ) {
+    	$classes[] = 'contact-us template-half';
+    }
 
 	return $classes;
 }
